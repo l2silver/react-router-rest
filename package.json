@@ -1,0 +1,24 @@
+{
+  "name": "react-router-rest",
+  "version": "0.0.1",
+  "description": "Simple restful route generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l2silver/react-router-rest.git"
+  },
+  "keywords": [
+    "react",
+    "react-router",
+    "rest"
+  ],
+  "author": "Leigh Silverstein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/l2silver/react-router-rest/issues"
+  },
+  "homepage": "https://github.com/l2silver/react-router-rest#readme"
+}
