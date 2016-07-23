@@ -1,5 +1,7 @@
 React Router Rest
 =========================
+[![Coverage Status](https://coveralls.io/repos/github/l2silver/react-router-rest/badge.svg?branch=master)](https://coveralls.io/github/l2silver/react-router-rest?branch=master)
+[![Build Status](https://travis-ci.org/l2silver/react-router-rest.svg?branch=master)](https://travis-ci.org/l2silver/react-router-rest)
 
 Simple standardized react router routes with wrapper support
 
