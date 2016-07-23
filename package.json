@@ -2,9 +2,17 @@
   "name": "react-router-rest",
   "version": "0.0.1",
   "description": "Simple restful route generator",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha --compilers js:babel-core/register --require test/helper test/*.test.js --recursive",
+    "test:watch": "npm run test -- --watch",
+    "coverage": "nyc -- npm run test",
+    "report": "nyc --reporter=lcov -- npm run test",
+    "build": "babel src --out-dir dist",
+    "build:watch": "npm run build -- -watch",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2",
+    "flow:watch": "watch 'npm run flow' src test",
+    "coveralls": "npm run report && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
@@ -20,5 +28,18 @@
   "bugs": {
     "url": "https://github.com/l2silver/react-router-rest/issues"
   },
-  "homepage": "https://github.com/l2silver/react-router-rest#readme"
+  "homepage": "https://github.com/l2silver/react-router-rest#readme",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
+    "chai-jsx": "^1.0.1",
+    "coveralls": "^2.11.11",
+    "flow-bin": "^0.29.0",
+    "mocha": "^2.5.3",
+    "nyc": "^7.0.0",
+    "react": "^15.2.1"
+  }
 }
